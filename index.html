@@ -1,109 +1,200 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empty HTML File</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Sixtyfour&display=swap" rel="stylesheet">
+    <title>Content Hero</title>
+    <style>
+        :root {
+            --color-primary-gradient: linear-gradient(45deg, #3A5F85, #2686CA);
+            --color-primary: #2680cafe;
+            --color-secondary: #0C2251;
+            --color-text-main: rgb(255, 255, 255);
+            --color-text-Secondary: rgba(255, 255, 255, 0.433);
+            --hr-color: #333;
+            --bordercolor: #1F2937;
+        }
+
+        .ProjectItem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 1em;
+            padding: 1em;
+            border-radius: 5px;
+            background-color: var(--color-primary);
+            border: var(--bordercolor);
+            border-width: 5px;
+        }
+
+        .Projects {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .Footer {
+            background-color: var(--color-primary);
+            padding: 2em;
+            text-align: center;
+            color: var(--color-text-main);
+        }
+
+        .MeetTheTeamDiv {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .TeamMember {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 1em;
+            padding: 1em;
+            border-radius: 5px;
+            background-color: var(--color-primary);
+            border: var(--bordercolor);
+            border-width: 5px;
+        }
+
+        .ContactUsText {
+            color: var(--color-text-main);
+            font-size: 2em;
+            text-align: center;
+        }
+
+        .HRSpace {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            height: 1em;
+            border: none;
+            background-color: var(--hr-color);
+        }
+
+        .SectionTitleText {
+            display: flex;
+            justify-content: center;
+            font-size: 2em;
+            color: var(--color-text-Secondary);
+        }
+
+        .TextLineBaseCSS {
+            color: var(--color-text-main);
+            font-size: 2em;
+            border-bottom: 0.2em solid var(--color-primary);
+        }
+
+        .Title {
+            color: var(--color-text-main);
+            font-size: 2em;
+            text-align: center;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--color-primary-gradient);
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: var(--color-primary-gradient);
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 2em;
+            text-align: center;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="Header">
-        <div class="navbar">
-            <button class="NavBarButton">Home</button>
-            <button class="NavBarButton" id="ProductenKnop">Product</button>
-            <button class="NavBarButton" id="SpesificatiesKnop">Specificaties</button> 
-            <button class="NavBarButton" id="CustomerOpinionButton">Wat Klanten Zeggen</button>
-            <button class="NavBarButton" id="GerelateerdeProductenButton">Gerelateerde Producten</button>
-            <button class="NavBarButton">Nieuwsbrief</button>
+    <header>
+        <h1 class="Title">Content Hero</h1>
+    </header>
+    <nav>
+        <a href="#">🏠Home</a>
+        <a href="#" id="AboutUsButton">🤷‍♂️About</a>
+        <a href="#" id="MeetTheTeamButton">🧑🏻‍💻Meet The Team</a>
+        <a href="#" id="ProjectsButton">Projects✅</a>
+        <a href="#" id="ContactUsButton">Contact📲</a>
+    </nav>
+    <div class="container fade-in">
+        <h2 class="TextLineBaseCSS fade-in">"The hero behind your digital success"</h2>
+    </div>
+    <hr class="HRSpace"></hr>
+    <h2 class="SectionTitleText fade-in">About Us</h2>
+    <div class="AboutUsDiv">
+        <p class="TextLineBaseCSS fade-in">Wij zijn een jong en dynamisch team dat met passie en vastberadenheid dit bedrijf is gestart als een schoolopdracht. Hoewel we nog maar een week bezig zijn, werken we hard om innovatieve en creatieve oplossingen te bieden. Onze missie is om te leren, te groeien en samen te werken aan projecten die een positieve impact hebben.</p>
+    </div>
+    <hr class="HRSpace"></hr>
+    <h2 class="SectionTitleText fade-in">Meet the team</h2>
+    <div class="MeetTheTeamDiv">
+        <div class="TeamMember">
+            <img src="https://images.pexels.com/photos/28216688/pexels-photo-28216688/free-photo-of-herfst-kamperen.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 1">
+            <h1 class="TextLineBaseCSS">Sem</h1>
+            <p>Developer</p>
         </div>
-        <div class="TitleText">
-            <h1>SuperWidget P3-1000</h1>
+        <div class="TeamMember">
+            <img src="https://images.pexels.com/photos/28216688/pexels-photo-28216688/free-photo-of-herfst-kamperen.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 2">
+            <h1 class="TextLineBaseCSS">Marouane</h1>
+            <p>Developer, Designer</p>
+        </div>
+        <div class="TeamMember">
+            <img src="https://images.pexels.com/photos/28216688/pexels-photo-28216688/free-photo-of-herfst-kamperen.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Team Member 3">
+            <h1 class="TextLineBaseCSS">Timo</h1>
+            <p>Developer, Designer</p>
         </div>
     </div>
-    <div class="ProductInfo">
-        <img class="ProductImage" src="https://cdn.pixabay.com/photo/2018/11/13/21/43/avatar-3814049_1280.png"></img>
-        <div class="ProductDescription">
-        <h1 class="ProdutcInfoTitleText">Over Het Product</h1>
-        <p class="ProductInfoText">De SuperWidget P3-1000 is het ultieme apperaat voor al uw dagelijkse behoeften. Compact, Stijlvol en SuperKrachtig</p>
-        <ul>
-            <li>Compact ontwerp</li>
-            <li>Laad snel op</li>
-            <li>3 jaar garantie</li>
-            <li>Energiezuinig: slechts 50w verbruik</li>
-            <li>Milieuvriendlijke materialen</li>
-        </ul>
-        <p>prijs: €299,99</p>
-        <button class="KoopNuButton">In winkelwagen</button>
+    <hr class="HRSpace"></hr>
+    <h2 class="SectionTitleText fade-in">Projecten</h2>
+    <div class="Projects">
+        <div class="TeamMember">
+            <img src="GoodFood.png" alt="Good Food">
+            <h1 class="TextLineBaseCSS">Good Food</h1>
         </div>
     </div>
-    <hr class="ObjectGaps"></hr>
-    <h1 class="SectionTitleText">Spesificaties</h1>
-    <hr class="TextHR"></hr>
-    <div class="SpesificationsDiv">
-    <ul class="SpesificationsList">
-        <li class="SpesificationLI">Afmeting: 10x10x10 cm</li>
-        <li class="SpesificationLI">Gewicht: 500 gram</li>
-        <li class="SpesificationLI">Kleur: Zwart</li>
-    </ul>
-    <ul class="SpesificationsList">
-        <li class="SpesificationLI">Materiaal: Hoorwaardig Aleminium</li>
-        <li class="SpesificationLI">Batterijduur: tot 20 uur</li>
-        <li class="SpesificationLI">Oplaadtijd: slechts 1 uur</li>
-    </ul>
-    <ul class="SpesificationsList">
-        <li class="SpesificationLI">Connectiviteit: bluetooth 5.0. Wi-Fi 6</li>
-        <li class="SpesificationLI">Waterbestendig: IP68-geceriticeert</li>
-        <li class="SpesificationLI">Maximale belasting: 10 kg</li>
-    </ul>
-    <ul class="SpesificationsList">
-        <li class="SpesificationLI">Werktempratuur: -10 tot 50°C</li>
-        <li class="SpesificationLI">Ondersteunende besturingsystemen: Windows, MacOS, Linux</li>
-        <li class="SpesificationLI">Garantie uitbreidbaar tot 5 jaar</li>
-    </ul>
-    <hr class="TextHR"></hr>
-    <div class="KlantBeoordelingen">
-        <h1 class="SectionTitleText KlantBeoordelingenTitleText">KlantBeoordelingen</h1>
-        <h2 class="Opinion">Geweldig Product. Heeft mijn leven makkelijker gemaakt! - Jan</h2>
-        <h2 class="Opinion">TopKwaliteit en Gebruiksvriendelijk. - Lisa</h2>
-        <h2 class="Opinion">Ik ben erg blij met de Oplaadtijd en de Batterijduur - Peter</h2>
-        <h2 class="Opinion">Het compacte ontwerp past perfect op mijn bureau - Karin</h2>
+    <hr class="HRSpace"></hr>
+    <h2 class="SectionTitleText fade-in">Contact Us</h2>
+    <div class="ContactUs">
+        <h1 class="ContactUsText">Mail: contenthero@gmail.com</h1>
+        <h1 class="ContactUsText">Phone Number: +1 202-456-1111</h1>
     </div>
-    </div>
-    <hr class="TextHR"></hr>
-    <hr class="TextHR"></hr>
-    <div class="GerelateerdeProducten">
-        <h1 class="SectionTitleText GerelateerdeProductenTitleText">Gerelateerde Producten</h1>
-        <p class="GerelateerdeProductenImage1" >SuperWidget P3-1000</p>
-        <p class="GerelateerdeProductenImage2" >SuperWidget P3-1000 pro</p>
-        <p class="GerelateerdeProductenImage3" >SuperWidget P3-2300</p>
-    </div>
-    <hr class="TextHR"></hr>
-    <div class="EmailDiv">
-        <h1 class="SectionTitleText">Uw gegevens</h1>
-        <div>
-            <label for="name">Naam:</label>
-            <input type="text" id="name" name="name">
-        </div>
-        <div>
-            <label for="age">Leeftijd:</label>
-            <input type="number" id="age" name="age">
-        </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-        </div>
-        <div>
-            <button type="submit">Verstuur</button>
-        </div>
-    </div> 
-    <hr class="TextHR"></hr>
-    <img class="BottomImage" src="https://cdn.pixabay.com/photo/2018/11/13/21/43/avatar-3814049_1280.png"></img>
     <div class="Footer">
-        <p class="CopyRight">2021 SuperWidget. Alle rechten voorbehouden.</p>
+         <p>© 2025 ContentHero. All rights reserved.</p>
     </div>
+</body>
+<footer>
+    <script src="scaletext.js"></script>
     <script>
         function setupSmoothScroll(buttonId, targetClassName) {
     document.getElementById(buttonId).addEventListener('click', function() {
@@ -118,14 +209,14 @@
 
 // Example usage
 document.addEventListener('DOMContentLoaded', function() {
-    setupSmoothScroll('SpesificatiesKnop', 'SpesificationsDiv');
-    setupSmoothScroll('ProductenKnop', 'ProductInfo');
-    setupSmoothScroll('CustomerOpinionButton', 'KlantBeoordelingen');
-    setupSmoothScroll('GerelateerdeProductenButton', 'GerelateerdeProducten');
+    setupSmoothScroll('ContactUsButton', 'ContactUs');
+    setupSmoothScroll('ProjectsButton', 'Projects');
+    setupSmoothScroll('MeetTheTeamButton', 'MeetTheTeamDiv');
+    setupSmoothScroll('AboutUsButton', 'AboutUsDiv');
 });
     </script>
-</body>
-<footer>
 </footer>
 </html>
+
+
 
